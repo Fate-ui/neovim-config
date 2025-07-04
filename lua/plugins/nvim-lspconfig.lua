@@ -73,7 +73,6 @@
 -- }
 
 return {
-  { import = "lazyvim.plugins.extras.lang.typescript" },
   {
     "neovim/nvim-lspconfig",
     dependencies = {
@@ -92,6 +91,14 @@ return {
       servers = {
         -- tsserver will be automatically installed with mason and loaded with lspconfig
         tsserver = {},
+        volar = {
+          init_options = {
+            vue = {
+              hybridMode = true, -- Enable hybrid mode for Vue 3
+            },
+          },
+        },
+        vtsls = {},
       },
       -- you can do any additional lsp server setup here
       -- return true if you don't want this server to be setup with lspconfig
@@ -108,4 +115,3 @@ return {
     },
   },
 }
-

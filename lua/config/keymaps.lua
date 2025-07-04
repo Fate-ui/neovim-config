@@ -31,6 +31,9 @@ vim.keymap.set("n", "yf", "V$%y", { desc = "复制函数" })
 -- 快速剪切函数 (c + f)
 vim.keymap.set("n", "cf", "V$%c", { desc = "剪切函数" })
 
+-- 快速注释函数
+vim.keymap.set("n", "vf", "v$%", { desc = "注释函数" })
+
 -- 全选
 vim.keymap.set("n", "<C-a>", "ggVG", { desc = "全选" })
 vim.keymap.set("i", "<C-a>", "<Esc>ggVG", { desc = "全选" })
